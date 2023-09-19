@@ -18,6 +18,7 @@ kyrs = Infowindow.find('h1', class_='h2')
 
 nums = Infowindow.find('div', class_='cryptocurrency-view-info__content')
 price = nums.find('div', class_='nobr h4')
+price = price.text.replace("\n", "").replace(" ", '')
 pricechange = Infowindow.find('div', class_='cryptocurrency-view-info__price-change text-desc text-bold nobr text-green')
 
 ##print('Курс Solana(SOL): ', price.text, "\n"'Изм. за сегодня: ', pricechange.text)
@@ -35,10 +36,11 @@ pricebtc = numsbtc.find('div', class_='nobr h4')
 pricecbtcchange = Windowbtc.find('div', class_='cryptocurrency-view-info__price-change text-desc text-bold nobr text-green')
 
 pricechange_text = pricechange.text.strip()
+pricechange_text = pricechange.text.replace(" ", "").replace("\n", '')
 
-SolShow = f'Курс SOL: {price.text} | Изм. за сегодня: {pricechange.text}'
+
+SolShow = f'Курс SOL: {price} | Изм. за сегодня: {pricechange_text}'
 print(SolShow.replace('\n', ''))
-
 
 
 
