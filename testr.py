@@ -39,6 +39,9 @@ pricechange_text = pricechange.text.strip()
 SolShow = f'Курс SOL: {price.text} | Изм. за сегодня: {pricechange.text}'
 print(SolShow.replace('\n', ''))
 
-
+fewhtdhjgdfdasfghdgweFG
+GD('G;DFJGLFD'
+   ''
+   'DFG')
 
 
